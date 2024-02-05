@@ -1,0 +1,297 @@
+*{
+    font-family: 'Libre Baskerville', serif;
+}
+.bg-Grain{
+    background-image: url(./images/filmGrain.jpg);
+    background-repeat: repeat;
+    
+    
+}
+.bgColor1{
+    background-color: rgb(27, 31, 34)!important;
+}
+.bgColor2{
+    background-color: rgb(107, 28, 14)!important;
+}
+.bgColor3{
+    background-color: rgb(44, 51, 51)!important;
+}
+.textColor1{
+    color: rgb(107, 28, 14)!important;;
+}
+.bgImage1{
+    background-image: url(./images/band.jpeg);
+    background-size: cover;
+    background-position: 50% 20%;
+    height: 90vh;
+}
+.bgSingle1{
+    background-image: url(./images/single1.jpeg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+   
+    
+    
+}
+.bgSingle2{
+    background-image: url(./images/single2.jpeg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+    
+    
+    
+}
+.bgSingle3{
+    background-image: url(./images/single3.jpeg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.cards:hover{
+    width: 34vw;
+    height: 46vh;
+    transition: .5s ease;
+    
+}
+.fontSizeBig{
+    font-size: 6rem;
+}
+.fontSizeMain{
+    font-size: 5rem;
+}
+.subtitle{
+    font-size: 1.5rem;
+}
+.intro{
+    color: rgb(27, 31, 34);
+    font-size: 2rem;
+}
+.introName{
+    transition: .4s;
+    color: rgb(107, 28, 14)!important;
+}
+.introName:hover{
+    transition: .4s;
+    background-color: rgb(27, 31, 34)!important;
+    color: rgb(100, 28, 15)!important;
+    
+    
+    
+
+}
+
+.mainMinHeight{
+    min-height: 170vh;
+}
+.cards{
+    width: 30vw;
+    height: 42vh;
+    transition: .5s ease;
+}
+#navbar {
+    overflow: hidden;
+    padding: 6px 6px;
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background-color: rgb(107, 28, 14)!important;
+    color: rgb(27, 31, 34)!important;
+}
+#navbar:hover{
+    background-color: rgb(27, 31, 34)!important;
+    color: rgb(151, 31, 9)!important;
+}
+
+svg{
+    width: 30px;
+    height: 30px;
+}
+.list-group{
+    border-radius: 0px!important;
+    
+}
+.list-group-item
+{
+    background-color: rgb(27, 31, 34)!important;
+    color: antiquewhite!important;
+    border-top: 0px!important;
+    border-left: 0px!important;
+    border-right: 0px!important;
+    border-bottom: 5px solid!important;
+    border-color: antiquewhite!important;
+    font-weight: bold!important;
+    
+}
+.boxes{
+    min-height: 70vh;
+}
+audio::-webkit-media-controls-timeline {
+    display: none;
+  }
+
+audio::-webkit-media-controls-enclosure {
+    
+    background-color:transparent;
+    -moz-border-radius: 1px !important;
+    -webkit-border-radius: 1px !important;
+    border-radius: 1px !important;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    
+    overflow: hidden;
+}
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+audio {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+  }
+@media screen and (max-width : 768px)  {
+
+    .introName{
+        font-size: 4rem;
+    }
+    .intro{
+        font-size: 1.5rem;
+    }
+    .socialMedia a{
+        padding-left: 15px;
+    }
+    .cards{
+        width: 30vw;
+        height: 25vh;
+    }
+    .cards:hover{
+        width: 34vw;
+        height: 26vh;
+        transition: .5s ease;
+        
+    }
+    .mainMinHeight
+    {
+        min-height: 140vh;
+    }
+    .boxes{
+        min-height: 52vh;
+    }
+
+}
+@media screen and (max-width : 425px) {
+
+    .introName{
+        font-size: 2.85rem;
+    }
+    .welcome{
+        padding-top: 15rem;
+    }
+    .intro{
+        color: antiquewhite!important;
+        font-size: 1rem!important;
+    }
+    .bgImage1{
+        background-image: url(./images/band3.jpeg);
+        background-size: cover;
+        background-position: 70% 0%;
+        height: 70vh;
+    }
+    .fontSizeMain{
+        font-size: 4rem;
+    }
+    .cardsResponsive{
+        display: flex;
+        flex-direction: column!important;
+        align-items: center;
+    }
+    .cards{
+        width: 70vw;
+        height: 40vh;
+    }
+    .cards:hover{
+        width: 73vw;
+        height: 43vh;
+        transition: .5s ease;
+        
+    }
+    .boxes{
+        width: 90vw!important;
+    }
+    .mainMinHeight
+    {
+        min-height: 230vh;
+    }
+    ul{
+        font-size: 0.55rem;
+    }
+    .subtitle{
+        font-size: 1.2rem!important;
+    }
+}
+@media screen and (max-width : 375px)
+{
+    .introName{
+        font-size: 2.5rem;
+    }
+    .fontSizeMain{
+        font-size: 3rem;
+    }
+    .cards{
+        width: 65vw;
+        height: 30vh;
+        justify-content: center;
+    }
+    .cards:hover{
+        width: 68vw;
+        height: 33vh;
+        transition: .5s ease;
+        
+    }
+    .mainMinHeight
+    {
+        min-height: 190vh;
+    }
+    
+
+}
+@media screen and (max-width : 320px){
+    .navResponsive{
+        display: flex;
+        flex-direction: column;
+        align-items: center!important;
+        
+    }
+    .socialMedia a{
+        padding-right: 5px;
+    }
+    .navResponsive a{
+        padding-bottom: 10px;
+    }
+    .introName{
+        font-size: 2.1rem;
+    }
+    .subtitle{
+        font-size: 1rem!important;
+    }
+    .cards{
+        width: 65vw;
+        height: 25vh;
+        justify-content: center;
+    }
+    .cards:hover{
+        width: 68vw;
+        height: 29vh;
+        transition: .5s ease;
+        
+    }
+    
+}
