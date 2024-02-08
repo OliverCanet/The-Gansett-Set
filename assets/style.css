@@ -146,9 +146,23 @@ audio::-webkit-media-controls-enclosure {
     
     overflow: hidden;
 }
+audio::-webkit-media-controls-panel {
+    padding: 0 0 0 1px;
+    justify-content: center; /*control panel elements are flex positioned*/
+  }
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
   display: none;
+}
+audio::-webkit-media-controls-play-button {
+    transform: scale(2, 2);
+    
+}
+
+audio::-webkit-media-controls-mute-button{
+    
+    transform: scale(1.8, 1.8);
+    
 }
 audio {
     margin: 0;
@@ -156,7 +170,14 @@ audio {
     border: 0;
     font-size: 100%;
     font: inherit;
-  }
+    
+    
+}
+.audioDiv{
+
+    margin-left: 4.5rem;
+
+}
 @media screen and (max-width : 1000px)
 {
     .introName{
@@ -214,7 +235,17 @@ audio {
     }
 
 }
-@media screen and (max-width : 502px)
+@media screen and (max-width : 636px)
+{
+    .bgImage1{
+        background-image: url(./images/band3.jpeg);
+        background-size: cover;
+        background-position: 70% 0%;
+        height: 70vh;
+    }
+
+}
+@media screen and (max-width : 503px)
 {
     .introName{
         font-size: 3rem;
@@ -249,6 +280,10 @@ audio {
     }
     .fontSizeMain{
         font-size: 3rem;
+    }
+    .mainMinHeight
+    {
+        min-height: 240vh;
     }
 
 }
