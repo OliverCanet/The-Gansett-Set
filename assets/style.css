@@ -97,6 +97,7 @@
     padding: 6px 6px;
     transition: 0.4s;
     position: fixed;
+    border-radius: 0px;
     width: 100%;
     top: 0;
     z-index: 99;
@@ -131,36 +132,45 @@ svg{
 .boxes{
     min-height: 70vh;
 }
-audio::-webkit-media-controls-timeline {
-    display: none;
-  }
 
-audio::-webkit-media-controls-enclosure {
-    
-    background-color:transparent;
-    -moz-border-radius: 1px !important;
-    -webkit-border-radius: 1px !important;
-    border-radius: 1px !important;
-    filter: alpha(opacity=80);
-    opacity: 0.8;
-    
-    overflow: hidden;
+.audioDiv{
+
+    margin-left: 4.5rem;
+
 }
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-  display: none;
+.songTitle
+{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0px!important;
 }
-audio {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-  }
+@media screen and (max-width : 1000px)
+{
+    .introName{
+        font-size: 5rem;
+    }
+    .socialMedia a{
+        padding-left: 15px;
+    }
+    .cards{
+        width: 30vw;
+        height: 25vh;
+    }
+    .cards:hover{
+        width: 34vw;
+        height: 26vh;
+        transition: .5s ease;
+        
+    }
+    .boxes{
+        min-height: 52vh;
+    }
+
+}
 @media screen and (max-width : 768px)  {
 
     .introName{
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     .intro{
         font-size: 1.5rem;
@@ -184,13 +194,78 @@ audio {
     }
     .boxes{
         min-height: 52vh;
+        width: 90vw!important;
+    }
+    .fontSizeMain{
+        font-size: 3rem;
+    }
+    .music-container{
+        display: none!important;
     }
 
+}
+@media screen and (max-width : 636px)
+{
+    .bgImage1{
+        background-image: url(./images/band3.jpeg);
+        background-size: cover;
+        background-position: 70% 0%;
+        height: 70vh;
+    }
+
+}
+@media screen and (max-width : 503px)
+{
+    .introName{
+        font-size: 3rem;
+    }
+    .cards{
+        width: 30vw;
+        height: 25vh;
+    }
+    .cards:hover{
+        width: 34vw;
+        height: 26vh;
+        transition: .5s ease;
+        
+    }
+    .cardsResponsive{
+        display: flex;
+        flex-direction: column!important;
+        align-items: center;
+    }
+    .cards{
+        width: 70vw;
+        height: 40vh;
+    }
+    .cards:hover{
+        width: 73vw;
+        height: 43vh;
+        transition: .5s ease;
+        
+    }
+    .boxes{
+        width: 90vw!important;
+    }
+    .fontSizeMain{
+        font-size: 3rem;
+    }
+    .mainMinHeight
+    {
+        min-height: 240vh;
+    }
+
+}
+@media screen and (max-width : 438px)
+{
+    .introName{
+        font-size: 2.8rem;
+    }
 }
 @media screen and (max-width : 425px) {
 
     .introName{
-        font-size: 2.85rem;
+        font-size: 2.6rem;
     }
     .welcome{
         padding-top: 15rem;
@@ -237,6 +312,32 @@ audio {
         font-size: 1.2rem!important;
     }
 }
+@media screen and (max-width : 384px) {
+    .introName{
+        font-size: 2.5rem;
+    }
+    .fontSizeMain{
+        font-size: 3rem;
+    }
+    .cards{
+        width: 63vw;
+        height: 30vh;
+        justify-content: center;
+    }
+    .cards:hover{
+        width: 65vw;
+        height: 33vh;
+        transition: .5s ease;
+        
+    }
+    .mainMinHeight
+    {
+        min-height: 190vh;
+    }
+
+}
+
+
 @media screen and (max-width : 375px)
 {
     .introName{
@@ -263,6 +364,33 @@ audio {
     
 
 }
+@media screen and (max-width : 368px) {
+
+    .introName{
+        font-size: 2.2rem;
+    }
+}
+@media screen and (max-width : 328px)
+{
+    .introName{
+        font-size: 2rem;
+    }
+    .subtitle{
+        font-size: 1rem!important;
+    }
+    .navResponsive{
+        display: flex;
+        flex-direction: column;
+        align-items: center!important;
+        
+    }
+    .socialMedia a{
+        padding-right: 5px;
+    }
+    .navResponsive a{
+        padding-bottom: 10px;
+    }
+}
 @media screen and (max-width : 320px){
     .navResponsive{
         display: flex;
@@ -277,7 +405,7 @@ audio {
         padding-bottom: 10px;
     }
     .introName{
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
     .subtitle{
         font-size: 1rem!important;
@@ -295,3 +423,67 @@ audio {
     }
     
 }
+.music-container {
+    background-color: transparent;
+    display: flex;
+    
+    position: relative;
+    
+    z-index: 10;
+  }
+  
+  
+  
+  
+  .music-container.play .img-container img {
+    animation-play-state: running;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .action-btn {
+    background-color: transparent;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+  }
+  
+  .action-btn.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+  }
+  
+  .action-btn:focus {
+    outline: 0;
+  }
+  
+  
+  
+  .music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  
+  .music-info h4 {
+    margin: 0;
+  }
+  
+  
