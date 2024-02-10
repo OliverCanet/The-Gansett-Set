@@ -8,6 +8,10 @@
     <link rel="shortcut icon" href="./assets/images/logoCropped.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Home - The Gansett Set</title>
@@ -19,15 +23,30 @@
                 <nav   class="navbar navbar-expand-lg  container   ">
                     <div class="container-fluid navResponsive">
                         <a id="logo" class="navbar-brand linkNav" href="#"><img src="./assets/images/logo.png" alt="logo" width="80" height="45"></a>
-                        <!--<div class="d-flex justify-content-center audioDiv">
-                            <audio controls class="d-flex justify-content-center " controlsList="nodownload noplaybackrate">
-                                <source src="./assets/audio/track4.mp4">
-                                <source src="./assets/audio/track5.mp4">
-                                <source src="./assets/audio/track1.mp4">
-                                <source src="./assets/audio/track2.mp4">
-                                <source src="./assets/audio/track3.mp4">
-                            </audio>
-                        </div>-->
+                        <div class="d-flex justify-content-center audioDiv flex-column">
+                            <div class="music-container" id="music-container">
+                                <div class="music-info">
+                                  <h4 id="title"></h4>
+                                  <div class="progress-container" id="progress-container">
+                                    <div class="progress" id="progress"></div>
+                                  </div>
+                                </div>
+                          
+                                <audio src="assets/audio/track4.mp4" id="audio"></audio>
+                          
+                                <div class="navigation">
+                                  <button id="prev" class="action-btn">
+                                    <i class="fas fa-backward"></i>
+                                  </button>
+                                  <button id="play" class="action-btn action-btn-big">
+                                    <i class="fas fa-play"></i>
+                                  </button>
+                                  <button id="next" class="action-btn">
+                                    <i class="fas fa-forward"></i>
+                                  </button>
+                                </div>
+                              </div>
+                        </div>
                         <div class="d-flex justify-content-end">
                             <div class="" id="navbarText">
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
@@ -91,6 +110,7 @@
                 </div>
 
             </div>
+            
 
 
         </main>
@@ -117,6 +137,7 @@
         }
         
     </script>
+    <script src="./assets/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
