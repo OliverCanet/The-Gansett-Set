@@ -97,6 +97,7 @@
     padding: 6px 6px;
     transition: 0.4s;
     position: fixed;
+    border-radius: 0px;
     width: 100%;
     top: 0;
     z-index: 99;
@@ -131,52 +132,17 @@ svg{
 .boxes{
     min-height: 70vh;
 }
-audio::-webkit-media-controls-timeline {
-    display: none;
-  }
 
-audio::-webkit-media-controls-enclosure {
-    
-    background-color:transparent;
-    -moz-border-radius: 1px !important;
-    -webkit-border-radius: 1px !important;
-    border-radius: 1px !important;
-    filter: alpha(opacity=80);
-    opacity: 0.8;
-    
-    overflow: hidden;
-}
-audio::-webkit-media-controls-panel {
-    padding: 0 0 0 1px;
-    justify-content: center; /*control panel elements are flex positioned*/
-  }
-audio::-webkit-media-controls-current-time-display,
-audio::-webkit-media-controls-time-remaining-display {
-  display: none;
-}
-audio::-webkit-media-controls-play-button {
-    transform: scale(2, 2);
-    
-}
-
-audio::-webkit-media-controls-mute-button{
-    
-    transform: scale(1.8, 1.8);
-    
-}
-audio {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    
-    
-}
 .audioDiv{
 
     margin-left: 4.5rem;
 
+}
+.songTitle
+{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0px!important;
 }
 @media screen and (max-width : 1000px)
 {
@@ -232,6 +198,9 @@ audio {
     }
     .fontSizeMain{
         font-size: 3rem;
+    }
+    .music-container{
+        display: none!important;
     }
 
 }
@@ -454,3 +423,67 @@ audio {
     }
     
 }
+.music-container {
+    background-color: transparent;
+    display: flex;
+    
+    position: relative;
+    
+    z-index: 10;
+  }
+  
+  
+  
+  
+  .music-container.play .img-container img {
+    animation-play-state: running;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .action-btn {
+    background-color: transparent;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+  }
+  
+  .action-btn.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+  }
+  
+  .action-btn:focus {
+    outline: 0;
+  }
+  
+  
+  
+  .music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  
+  .music-info h4 {
+    margin: 0;
+  }
+  
+  
